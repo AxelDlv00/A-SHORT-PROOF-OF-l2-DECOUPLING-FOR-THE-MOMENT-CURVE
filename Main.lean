@@ -1,4 +1,4 @@
-import ASHORTPROOFOFL2DECOUPLINGFORTHEMOMENTCURVE
+import Projet
 
 def main : IO Unit :=
   IO.println s!"Hello, {hello}!"
