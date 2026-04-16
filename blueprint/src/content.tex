@@ -5,3 +5,38 @@
 % If you want to split the blueprint content into several files then
 % the current file can be a simple sequence of \input. Otherwise It
 % can start with a \section or \chapter for instance.
+
+\chapter{Basic Examples}
+
+We start with a very simple definition.
+
+\begin{definition}\label{def:my_square}
+\lean{my_square}
+\leanok
+Let $x$ be a real number. We define the square of $x$ as $x \times x$.
+\end{definition}
+
+Notice that we placed the \texttt{\textbackslash leanok} macro above, which will color this definition green in the graph because the Lean code is complete.
+
+\begin{lemma}\label{lem:square_nonneg}
+\uses{def:my_square}
+\lean{square_nonneg}
+\leanok
+For any real number $x$, we have $0 \le x^2$.
+\end{lemma}
+\begin{proof}
+\leanok
+This follows trivially from the properties of real numbers.
+\end{proof}
+
+Because we included \texttt{\textbackslash uses\{def:my\_square\}}, the blueprint graph will draw a dependency arrow from our definition to this lemma.
+
+\begin{theorem}\label{thm:fermat}
+\lean{fermat_last}
+For any integers $x, y, z$ and $n > 2$, $x^n + y^n \ne z^n$.
+\end{theorem}
+\begin{proof}
+The proof is too large to fit in this margin.
+\end{proof}
+
+Notice we did \textbf{not} include \texttt{\textbackslash leanok} for the theorem or its proof, because we used a \texttt{sorry} in our Lean file! This will show up as a blue (unverified) node in your graph.
