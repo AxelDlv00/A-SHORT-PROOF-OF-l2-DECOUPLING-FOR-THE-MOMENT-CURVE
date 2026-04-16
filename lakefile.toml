@@ -1,0 +1,10 @@
+name = "A-SHORT-PROOF-OF-l2-DECOUPLING-FOR-THE-MOMENT-CURVE"
+version = "0.1.0"
+defaultTargets = ["a-short-proof-of-l2-decoupling-for-the-moment-curve"]
+
+[[lean_lib]]
+name = "ASHORTPROOFOFL2DECOUPLINGFORTHEMOMENTCURVE"
+
+[[lean_exe]]
+name = "a-short-proof-of-l2-decoupling-for-the-moment-curve"
+root = "Main"
